@@ -1,7 +1,7 @@
 window.HumanReadableIds = {
-    create: function(precision=1e3) {
-        return this.encode(Math.round((Date.now())/precision) %
-            (this.nouns.length*this.verbs.length*this.adjectives.length*this.adverbs.length));
+    create: function() {
+        return this.encode(Math.floor(Math.random() * 
+            this.nouns.length*this.verbs.length*this.adjectives.length*this.adverbs.length));
     },
 
     encode: function (number) {
